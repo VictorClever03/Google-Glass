@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+ul#album-fotos {
+list-style: none;
+width: 700px;
+margin: 0 auto;
+padding: 50px;
+overflow: hidden;
+}
+
+ul#album-fotos li{
+float:left;
+width:200px;
+height:200px;
+margin:10px;
+outline:5px solid #ffffff;
+box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+}
+
+ul#album-fotos li span {
+opacity:0;
+color:#fff;
+text-shadow:1px 0px 0px;
+background:rgba(0,0,0,.3);
+line-height:360px;
+padding:5px;
+font-size:9pt;
+}
+ul#album-fotos li:hover{
+-webkit-transform: scale(1.5);
+-webkit-transition:all .9s ease-in;
+}
+
+ul#album-fotos li:hover span{
+opacity:1;
+}
+
+ul#album-fotos li#foto01 {
+background:url("http://localhost/unset/public/img/_imagens/pp.jpg") no-repeat;
+background-position:50% 50%;
+background-size:400px 400px;
+background-color:#fff;
+}
+
+ul#album-fotos li#foto01:hover {
+background-position:0px 0px;
+background-size:200px 200px;
+}
+
+ul#album-fotos li#foto02 {
+background:url('http://localhost/unset/public/img/_imagens/papa.jpg') no-repeat;
+background-position:50% 50%;
+background-size:400px 400px;
+background-color:#fff;
+}
+
+ul#album-fotos li#foto02:hover {
+background-position:0px 0px;
+background-size:200px 200px;
+}
+
+ul#album-fotos li#foto03 {
+background:url('http://localhost/unset/public/img/_imagens/galeria-03.jpg') no-repeat;
+background-position:50% 50%;
+background-size:400px 400px;
+background-color:#fff;
+}
+
+ul#album-fotos li#foto03:hover {
+background-position:0px 0px;
+background-size:200px 200px;
+}
+
+ul#album-fotos li#foto04 {
+background:url('http://localhost/unset/public/img/_imagens/fotos.jpg') no-repeat;
+background-position:50% 50%;
+background-size:400px 400px;
+background-color:#fff;
+}
+
+ul#album-fotos li#foto04:hover {
+background-position:0px 0px;
+background-size:200px 200px;
+}
+
+ul#album-fotos li#foto05 {
+background:url('http://localhost/unset/public/img/_imagens/galeria-05.jpg') no-repeat;
+background-position:50% 50%;
+background-size:400px 400px;
+background-color:#fff;
+}
+
+ul#album-fotos li#foto05:hover {
+background-position:0px 0px;
+background-size:200px 200px;
+}
+
+ul#album-fotos li#foto06 {
+background:url('http://localhost/unset/public/img/_imagens/galeria-06.jpg') no-repeat;
+background-position:50% 50%;
+background-size:400px 400px;
+background-color:#fff;
+}
+
+ul#album-fotos li#foto06:hover {
+background-position:0px 0px;
+background-size:200px 200px;
+}

@@ -1,0 +1,260 @@
+
+@font-face {
+	font-family: 'vicont';
+	src:url("http://localhost/unset/public/_fonts/bubblegum-sans-regular.otf");
+	}
+	body{
+			background-color: #dddddd;
+			color:black;
+			font-family: Arial,sans-serif;
+		}
+			
+		p{
+			text-align: justify;
+			text-indent: 30px;
+			
+		}
+		div#interface{
+			width: 930px;
+			background-color: #ffffff;
+			margin: -20px auto 0px auto;
+			box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+			padding: 15px;
+
+		}
+		header#cabecalho img#oculo{
+			position: relative;
+			left: 770px ;
+			top:-43px ;
+
+		}
+		header#cabecalho{
+			border-bottom: 1px #606060 solid;
+			height: 150px;
+			background: url("D:/HTML Gustavo Guanabara/Pacote/_imagens/glass-logo-peq.jpg") no-repeat 0px 80px; 
+
+		}
+		header#cabecalho h1{
+			font-family: 'vicont', sans-serif;
+			font-size: 30pt;
+			color:#606060;
+			text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+			padding: 0px;
+			margin-bottom: 0px;
+		}
+		header#cabecalho h2{
+			font-family: Calibri Light, sans-serif;
+			color: rgba(0,0,0,.26);
+			font-size: 15pt;
+			padding: 0px;
+			margin-top: 0px;
+			
+		}
+
+		/*Formatação de imagens com legendas*/
+
+		figure.foto-legenda	{
+			position: relative;
+			border:8px solid white;
+			box-shadow: 1px 1px 4px black;
+			width: 330pt ;
+			margin-right: auto;
+			margin-left: auto;
+			
+		}		
+		figure.foto-legenda img{
+			width: 100%;
+			height: 100%;
+			
+
+		}
+		figure.foto-legenda figcaption{
+			
+			opacity: 0;
+			position: absolute;
+            top:0px;
+			background-color: rgba(0,0,0,0.4);
+			color:white;
+			width:100%;
+			height: 100%;
+			padding: 10px;
+			box-sizing: border-box;
+  			transition: opacity 2s;
+}
+	figure.foto-legenda:hover figcaption{
+		opacity: 1;
+		
+	}
+	/*Formatação do Menu by_victor*/
+	nav#menu{
+		display: block;
+	}
+	nav#menu ul{
+		list-style: none;
+		text-transform: uppercase;
+		position: absolute;
+		top: -20px;
+		padding-left: 320px;
+
+	}
+	nav#menu li {
+		display: inline-block;
+		background-color: #dddddd;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		margin: 2px;	
+		transition: background-color 1s;	
+	}
+	nav#menu li:hover {
+		-webkit-transform: scale(1.19);
+       -webkit-transition:all .5s ease-in;
+		background-color: #606060;
+		
+	}
+	nav#menu h1{
+		display: none;
+	}
+	nav#menu a{
+		padding: 10px;
+		color: #000000;
+		text-decoration: none;
+	}
+	
+	/* Formatação do corpo, lateral, rodape*/
+	section#corpo{
+		display: block;
+		width: 480px;
+		float: left;
+		border-right: 1px solid #606060;
+		padding: 10px;
+	}
+	aside#lateral{
+		display: block;
+		width: 408px;
+		float: right;
+		padding: 7px;
+		background-color: #cecece;
+		margin-top: 10px;
+box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+		}
+	aside#lateral h1{
+		font-family: 'vicont', sans-serif;
+		font-size: 20pt;
+		color: #606060;
+		margin-top: 60px;
+
+	}	
+	aside#lateral h2{
+		background-color: #606060;
+		font-size: 13pt;
+		color: #ffffff;
+		padding: 5px;
+	}
+	footer#rodape{
+		clear: both;
+		border-top: 1px solid #606060;
+		}
+		footer#rodape p{
+			text-align: center;
+		}
+		/*formatcao do facebook e do twitter*/
+		p#twi a{
+			text-decoration: none;
+			color: rgb(69,69,69);
+		}
+		p#twi a:hover {
+			color: rgb(3,33,251);
+			text-decoration: underline;
+		}
+		a#proj{
+			text-decoration: none;
+			color: rgb(69,69,69);
+		}
+		a#proj:hover{
+			color: rgb(3,33,251);
+			text-decoration: underline;
+		}
+		/*formatacao de tabelas*/
+		table#tabela{
+			border:1px solid #606060;
+			border-spacing: 0px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		table#tabela td{
+			border:1px solid #606060;
+			padding: 10px;
+			text-align: center;
+			vertical-align: middle;
+		}
+		table#tabela td.ce {
+           color: #ffffff;
+           background-color: #606060;
+           border:none;
+           vertical-align: top;
+           font-weight: bold;
+           text-align: right;
+		}
+
+		table#tabela td.cd{
+			background-color: #cecece;
+			text-align: left;
+		}
+		table#tabela caption{
+			color: #888888;
+			font-size: 13pt;
+			font-weight: bolder;
+		}
+		table#tabela caption span{
+			display: block;
+			float: right;
+			margin-top: 10px;
+			color: #000000;
+			font-size: 8pt;
+		}
+		article#noticia h2{
+			font-size: 13pt;
+			color: #606060;
+			background-color: #dddddd;
+			padding: 5px 0px 5px 10px;
+			margin: 10px 0px 10px 0px;
+		}
+		header#cabecalho2 h1{
+			font-family: 'vicont', sans-serif;
+			font-size: 20pt;
+			color: #606060;		
+			margin-bottom: 0px;
+			margin-top:  0px;
+		}
+		header#cabecalho2 h2{
+			font-size: 13pt;
+			color: #cecece;
+			background-color: #ffffff;
+			margin: 0px;
+		}
+		header#cabecalho2 h3{
+			font-size: 12pt;
+			color: #606060;			
+		}
+		.direita{
+			text-align: right;
+			margin-top: 4px;
+		}
+		/* Formatacao dos Midea*/
+		video#video-index1{
+			display: block;
+			position: relative;
+			margin: auto;
+			width: 400px;
+			height: 224px;
+		}
+      video#video-index{
+      	    display: block;
+      	    position: relative;
+			width: 460px;
+			height: 270px;
+			margin: auto;
+
+		}
+
+	
