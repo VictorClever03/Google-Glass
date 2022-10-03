@@ -8,7 +8,7 @@
       <h2>A revolução do Google está chegando</h2>
       <span style="font-size: 10pt;"><?= DataActual::dataActual();?></span>
       <h1 style="font-size: 20pt; margin-top:0px;"> <?php if (isset($_SESSION['usuario_id'])) : ?>
-            Olá, <?= $_SESSION['usuario_nome']; ?><strong> seja bemvindo</strong></h1>
+            Olá, <?= $_SESSION['usuario_nome']; ?><strong> seja bemvindo(a)</strong></h1>
    <?php else : ?>
 
       <img src="<?= URL ?>public/img/_imagens/glass-logo-peq.jpg" alt="Logo">
@@ -19,23 +19,23 @@
 
    <?php if(CONTROLADOR=='especs'):?>
 
-      <img id="oculo" src="<?= URL ?>/public/img/_imagens/especificacoes.png">
+      <img id="oculo" src="<?= URL ?>public/img/_imagens/especificacoes.png">
 
    <?php elseif(CONTROLADOR=='fotos'):?>
       
-      <img id="oculo" src="<?= URL ?>/public/img/_imagens/fotos.png">
+      <img id="oculo" src="<?= URL ?>public/img/_imagens/fotos.png">
       
-      <?php elseif(CONTROLADOR=='solicitar'):?>
+      <?php elseif(CONTROLADOR =='solicitar'):?>
          
-         <img id="oculo" src="<?= URL ?>/public/img/_imagens/contato.png">
+         <img id="oculo" src="<?= URL ?>public/img/_imagens/contato.png">
          
          <?php elseif(CONTROLADOR=='post'):?>
             
-            <img id="oculo" src="<?= URL ?>/public/img/_imagens/video.png">
+            <img id="oculo" src="<?= URL ?>public/img/_imagens/video.png">
             
             <?php else:?>
                
-               <img id="oculo" src="<?= URL ?>/public/img/_imagens/glass-oculos-preto-peq.png">
+               <img id="oculo" src="<?= URL ?>public/img/_imagens/glass-oculos-preto-peq.png">
                <?php endif;?>  
 
    <nav id="menu">

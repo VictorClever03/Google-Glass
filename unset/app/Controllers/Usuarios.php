@@ -75,9 +75,15 @@ class Usuarios extends Controller
 
                     $dados['senha'] = Valida::pass_segura($formulario['senha']);
                     $cadastrar=$this->Data->armazena($dados);
+                    $cadastrarf=$this->Data->storeperfil();
+                    $cadastrarp=$this->Data->storeupload();
                     if ($cadastrar) :
+                        if($cadastrarf AND $cadastrarp):
                         Sessao::mensagem('usuario','Cadastrado com sucesso');
                         Url::redireciona('usuarios/login');
+                        else:
+                            die(Sessao::mensagem('usuario','Erro com banco de dados', 'alerta'));
+                        endif;    
                     else :
                         die(Sessao::mensagem('usuario','Erro com banco de dados', 'alerta'));
                     endif;
@@ -106,6 +112,11 @@ class Usuarios extends Controller
     }
     public function login()
     {
+        if (!Sessao::restrito()) :
+            
+            Url::redireciona('home');
+        endif;
+
         $formulario = filter_input_array(INPUT_POST, FILTER_DEFAULT);
         //  var_dump($formulario);
         if (isset($formulario['log'])) :
@@ -130,7 +141,7 @@ class Usuarios extends Controller
                 if (Valida::email($formulario['email'])) :
                     $dado['erro_email'] = "preencha corretamente o email";
                 else :
-                    $checarlogin=$this->Data->checalogin($dado['email'],$dado['senha']);
+                    $checarlogin=$this->Data->checalogin($dado['email'],$dado['senha'],0);
                     if ($checarlogin) :
                         Sessao::mensagem('usuarios','Login realizado com sucesso');
                         Url::redireciona('home');

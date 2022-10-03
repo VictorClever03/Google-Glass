@@ -25,6 +25,6 @@ use App\Helpers\Valida;
              
              </div>
             </div>
-            <footer id="f" style="padding:5px; background:#ddd; text-align:left;font-size:9pt; color:grey">Escrito por: <?=$dados['posts']['nome']?> no dia: <?=Valida::ANG($dados['posts']['dataposts'])?> 
+            <footer id="f" style="padding:5px; background:#ddd; text-align:left;font-size:9pt; color:grey">Escrito por: <?=$dados['posts']['nome']?><?php if($dados['posts']['nivel']==1):echo"(admin)";endif?> no dia: <?=Valida::ANG($dados['posts']['dataposts'])?> 
             </footer>
         </div>

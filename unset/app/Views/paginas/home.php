@@ -30,7 +30,7 @@ de testes e já possui um vídeo totalmente gravado com o dispositivo.
 Além disso, a companhia de buscas registrou novas patentes anti<wbr/>-furto
 e de desbloqueio de tela para o acessório.</p>
 <figure class="foto-legenda">
-<img src="<?=URL?>/public/img/_imagens/glass-quadro-homem-mulher.jpg"/>
+<img src="<?=URL?>public/img/_imagens/glass-quadro-homem-mulher.jpg"/>
 <figcaption>
 	<span style="font-size: 20pt"> <b> Google Glass</b></span>
 <p>	Uma nova maneira de ver o mundo.</p>
@@ -58,7 +58,7 @@ e de desbloqueio de tela para o acessório.</p>
 
 <div>
     <video id="video-index" controls="controls" poster="../_imagens/video-mini01.jpg">
-        <source src="<?=URL?>/public/_media/one-day.mp4" type="video/mp4">
+        <source src="<?=URL?>public/_media/one-day.mp4" type="video/mp4">
     </video>
 </div>
 </article>
@@ -69,11 +69,12 @@ e de desbloqueio de tela para o acessório.</p>
 
 <div>
     <video id="video-index1" controls="controls" poster="../_imagens/video-mini02.jpg">
-        <source src="<?=URL?>/public/_media/how-it-feels.mp4" type="video/mp4">
+        <source src="<?=URL?>public/_media/how-it-feels.mp4" type="video/mp4">
     </video>
 </div>
 
 <h2>Novidades no Glass</h2>
+
 <p>O Google enfim revelou as especificações completas do Google Glass, e com ele uma surpresa ainda inédita no mercado: a gigante das buscas usará um sis;tema de áudio baseado na transdução por condução. Através das hastes dos óculos, o som será transmitido para o ouvido do usuário por meio de microvibrações em determinados ossos de sua cabeça, sem usar nenhum tipo de alto<wbr>-falante.</p>
 
 <p>Além da surpresa do áudio, a tela montada a frente do olho do usuário também chamou atenção. Serão 640 x 360 pixels de resolução que, em proporção, equivaleria a um monitor de 25 polegadas de alta definição colocado a 2,5 metros de distância do espectador.

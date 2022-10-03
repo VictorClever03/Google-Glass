@@ -3,7 +3,7 @@
 
 define('APP', dirname(__FILE__));
 define('PU', dirname(__DIR__).DIRECTORY_SEPARATOR."public");
-define('URL', 'http://localhost/unset/');
+define('URL', 'http://localhost:8080/unset/');
 define('APP_NOME', 'Curso de PHP7 Orientado a Objectos e MVC' );
 define('DB',[
     'HOST'=>'localhost',

@@ -19,15 +19,28 @@ class Router
 
             $this->controller = ucwords($url[0]);
             unset($url[0]);
-        } elseif (empty($url[0])) {
+            $carregar = "\\App\\Controllers\\" . $this->controller;
+            $this->controller = new $carregar;
+        } elseif (file_exists(dirname(__DIR__).DIRECTORY_SEPARATOR."Controllers".DIRECTORY_SEPARATOR."admin".DIRECTORY_SEPARATOR.ucwords($url[0]).".php")) {
 
-            $this->controller = ucwords("home");
+            $this->controller = ucwords($url[0]);
+            unset($url[0]);
+            $carregar = "\\App\\Controllers\\admin\\" . $this->controller;
+            $this->controller = new $carregar;
             
-        } else {
-            $this->controller = "Error";
+        } 
+        elseif(empty($url[0])){
+            
+            $this->controller = ucwords("home");
+            $carregar = "\\App\\Controllers\\" . $this->controller;
+            $this->controller = new $carregar;
         }
-        $carregar = "\\App\\Controllers\\" . $this->controller;
-        $this->controller = new $carregar;
+        else {
+            $this->controller = "Error";
+            $carregar = "\\App\\Controllers\\" . $this->controller;
+            $this->controller = new $carregar;
+        }
+      
         if (isset($url[1])) {
             if (method_exists($this->controller, $url[1])) :
                 $this->metodo = $url[1];

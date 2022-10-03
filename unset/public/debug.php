@@ -1,9 +1,10 @@
 <?php
-
+ require '../app/Libraries/Uploads.php';
+// use App\Libraries\uploads;
 if (isset($_FILES['upload'])) :
-    include '../app/Libraries/Uploads.php';
-    $up = new uploads();
-    $up->imagem($_FILES['upload']);
+   
+    $up = new  Uploads();
+    $up->imagem($_FILES['upload'],5);
     $up->getexito()? print $up->getexito():print $up->geterro();
     echo"<hr>";
     var_dump($up);

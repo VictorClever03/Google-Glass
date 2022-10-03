@@ -25,6 +25,7 @@ class Post
             return false;
         }
     }
+   
     public function lerPost()
     {
         $this->db->query("SELECT *, posts.id as idposts, posts.criado_em as dataposts, usuarios.id as idusuarios, usuarios.criado_em as datausuarios  FROM posts INNER JOIN usuarios ON posts.id_usuarios=usuarios.id ORDER BY dataposts DESC");
@@ -34,6 +35,7 @@ class Post
            return $this->db->resultados();
         endif;
     }
+    // ler meus posts
     public function lerPostusuarios($data)
     {
         $this->db->query("SELECT * FROM posts WHERE id_usuarios=:usuariologado ORDER BY id DESC");

@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Libraries;
 class uploads
 {
     private $diretorio;
@@ -9,14 +9,6 @@ class uploads
     private $erro;
     private $nome;
     private $pasta;
-    public function getexito()
-    {
-        return $this->exito;
-    }
-    public function geterro():string
-    {
-        return $this->erro;
-    }
     public function __construct($nome = null)
     {
         $this->diretorio = $nome ??  'uploads';
@@ -32,8 +24,8 @@ class uploads
         $this->tamanho=$tamanho??1;
         $extensao=pathinfo($this->arquivo['name'], PATHINFO_EXTENSION);
 
-        $extensoesValidas=['png','jpg','mp3'];
-            $tiposValidas=['image/jpeg','image/png','audio/mpeg'];
+        $extensoesValidas=['png','jpg'];
+            $tiposValidas=['image/jpeg','image/png'];
     
             // var_dump(strtolower($extensao));
             if(!in_array(strtolower($extensao),$extensoesValidas)):
@@ -72,11 +64,22 @@ class uploads
     private function moverimagem()
     {
         if(move_uploaded_file($this->arquivo['tmp_name'],$this->diretorio.DIRECTORY_SEPARATOR.$this->pasta.DIRECTORY_SEPARATOR.$this->nome)):
-            $this->exito= $this->nome;
+            $this->exito= "Sucesso ao fazer upload da imagem!!";
             $this->erro=false;
+            $_SESSION['path']=$this->diretorio.DIRECTORY_SEPARATOR.$this->pasta.DIRECTORY_SEPARATOR.$this->nome;
         else:
             $this->exito=false;
             $this->erro="Erro ao mover a imagem";
         endif;
+    }
+    public function getexito()
+    {
+        $i =  $this->exito;
+        return $i;
+    }
+    public function geterro()
+    {
+        $ir = $this->erro;
+        return $ir;
     }
 }

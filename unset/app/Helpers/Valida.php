@@ -30,5 +30,9 @@ class Valida{
         public static function ANG($dado){
             return date('d/m/Y H:i:s' , strtotime($dado));
         }
+        public static function idade($dado){
+            $nasc=explode('-',$dado);
+            return date('Y') - $nasc[0];
+        }
       
 }
